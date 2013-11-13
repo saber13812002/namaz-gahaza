@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">namaz ghaza mostahab</string>
+    <string name="setting">setting</string>
+    <string name="undo">undo</string>
+    <string name="redo">redo</string>
+    <string name="userid">saber</string>
+    <string name="totalrokat">400</string>
+    <string name="me">me</string>
+    <string name="all">all</string>
+</resources>

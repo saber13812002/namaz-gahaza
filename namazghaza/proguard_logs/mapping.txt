@@ -1,0 +1,19 @@
+com.mesbahsoft.namazghaza.MainActivity -> com.mesbahsoft.namazghaza.MainActivity:
+    int rokat -> a
+    com.mesbahsoft.namazghaza.db_helper RokatDBHelper -> b
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+com.mesbahsoft.namazghaza.calc -> com.mesbahsoft.namazghaza.calc:
+    com.mesbahsoft.namazghaza.db_helper RokatDBHelper -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onClick(android.view.View) -> onClick
+com.mesbahsoft.namazghaza.db_helper -> com.mesbahsoft.namazghaza.a:
+    java.lang.String Select_Sum_NAMAZ_Rokat -> a
+    java.lang.String Select_Sum_NAMAZ_GHAZA -> b
+    void onCreate(android.database.sqlite.SQLiteDatabase) -> onCreate
+    void onUpgrade(android.database.sqlite.SQLiteDatabase,int,int) -> onUpgrade
+    int getCountKolAda() -> a
+    int getCountKolGhaza() -> b
+    java.lang.String getlast2records() -> c
+    boolean addAdaRokatRow(int) -> a
+    boolean addGhazaRokatRow(int) -> b

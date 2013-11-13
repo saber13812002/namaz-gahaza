@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              style="@style/app_theme">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp" android:layout_weight="0.6" android:background="@drawable/toplinkbar">
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/me"
+                android:id="@+id/txtToplinkbarme" android:layout_weight="1" android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50dp" android:textColor="@color/black"/>
+        <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/all"
+                android:id="@+id/txtTopLinkBarAll" android:layout_weight="1" android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50dp" android:textColor="@color/black"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp" android:layout_weight="2">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1">
+            <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/fish_icon128">
+                <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnSetting" android:layout_marginTop="1dp" android:layout_marginRight="1dp"
+                        android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+                        android:textSize="@dimen/txt20" android:background="@drawable/settings_icon24"/>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp" android:layout_weight="1">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/userid"
+                        android:id="@+id/txtUserID" android:layout_gravity="center" android:textSize="@dimen/txt20"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp" android:layout_weight="1">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TodayRemainAVG"
+                        android:id="@+id/txtTodayRemain" android:textSize="@dimen/txt20"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp" android:layout_weight="1" android:layout_gravity="right">
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="400"
+                        android:id="@+id/txtRemainRokatAll" android:layout_gravity="center|right"
+                        android:textSize="40dp" android:layout_weight="1"/>
+                <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnCalc" android:layout_gravity="right|center_vertical"
+                        android:textSize="@dimen/txt25" android:layout_weight="1"
+                        android:background="@drawable/plus_icon32"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp" android:layout_weight="3">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent" android:layout_weight="1">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/txtBigNumnerTodayRokat" android:layout_gravity="center" android:textSize="100dp"
+                    android:layout_marginTop="25dp"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent" android:layout_weight="1">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="1">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent" android:layout_weight="1">
+                    <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/btnIncrement" android:textSize="80dp" android:layout_gravity="center"
+                            android:layout_marginTop="25dp" android:background="@drawable/rokat_1_tukhali_48"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent" android:layout_weight="1">
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp" android:layout_weight="1">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtplustwo" android:layout_gravity="center"
+                                android:layout_marginTop="15dp" android:textSize="@dimen/txt25"
+                                android:background="@drawable/rokat_2_tukhali_48"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp" android:layout_weight="1">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtplus3" android:layout_gravity="center"
+                                android:layout_marginTop="15dp" android:textSize="@dimen/txt25"
+                                android:background="@drawable/rokat_3_tukhali_48"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp" android:layout_weight="1">
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/txtplus4" android:layout_gravity="center"
+                                android:layout_marginTop="15dp" android:textSize="@dimen/txt25"
+                                android:background="@drawable/rokat_4_tukhali_48"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_weight="3" android:layout_marginTop="10dp">
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="recent"
+                        android:id="@+id/last2" android:layout_gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

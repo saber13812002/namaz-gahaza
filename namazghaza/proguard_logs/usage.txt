@@ -1,0 +1,24 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+com.mesbahsoft.namazghaza.BuildConfig
+com.mesbahsoft.namazghaza.R
+com.mesbahsoft.namazghaza.R$attr
+com.mesbahsoft.namazghaza.R$color
+com.mesbahsoft.namazghaza.R$dimen
+com.mesbahsoft.namazghaza.R$drawable
+com.mesbahsoft.namazghaza.R$id
+com.mesbahsoft.namazghaza.R$layout
+com.mesbahsoft.namazghaza.R$string
+com.mesbahsoft.namazghaza.R$style
+com.mesbahsoft.namazghaza.db_helper:
+    private static final java.lang.String LOG
+    private static final int DATABASE_VERSION
+    private static final java.lang.String DATABASE_NAME
+    private static final java.lang.String TABLE_NAMAZ
+    private static final java.lang.String TABLE_GHAZA
+    private static final java.lang.String KEY_ID
+    private static final java.lang.String KEY_CREATED_AT
+    private static final java.lang.String KEY_ROKAT
+    private static final java.lang.String KEY_GHAZA_ROKAT
+    private static final java.lang.String CREATE_TABLE_NAMAZ
+    private static final java.lang.String CREATE_TABLE_GHAZA
