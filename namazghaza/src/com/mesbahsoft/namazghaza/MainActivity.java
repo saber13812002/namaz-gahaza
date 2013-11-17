@@ -19,10 +19,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
      * Called when the activity is first created.
      */
 
-    int rokat=0;
 
     private db_helper RokatDBHelper;
 
+
+    int rokat=0;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -31,13 +32,49 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
         RokatDBHelper = new db_helper(this);
 
-        TextView txtRokatAll = (TextView)findViewById(R.id.txtRemainRokatAll);
-        int a = RokatDBHelper.getCountKolGhaza()-RokatDBHelper.getCountKolAda();
-        String s=Integer.toString(a);
-        txtRokatAll.setText(s);
+        // کل رکعات یک روز گذشته  که خوانده شده در بیست و چهار ساعت گذشته
+        //rokat = RokatDBHelper.getCountKolAdaLastDay();
 
-        TextView last2rowGhaza = (TextView) findViewById(R.id.last2);
-        last2rowGhaza.setText(RokatDBHelper.getlast2records());
+        // نمایش سرعت نسبی ادا کردن نماز ها به نسبت روز های فعال یا کل روزها
+
+
+        // نمایش مجزای عدد کل رکعات بدهکاری و کل خوانده شده ها
+
+        // نمایش امتیاز به ازای مداومت هر روزه حتی یک نماز ثبت شده
+
+        // عدم ثبت نماز ها کمتر از یک دقیقهبازای هر رکعت
+
+
+        //نمایش چارا روز های گذشته
+
+
+        // نمایش چارت هفته های گذشته
+
+
+        // نمایش رتبه ایشان در بین بقیه  دو رقیب جلو تر و دو رقیب عقب تر
+
+
+        //محاسبه تعداد دفعات و زمان هایی که برنامه باز شده است
+
+
+        //سینک کل رکورد ها با سرور
+
+
+        // محاسبه خودکار نماز بعدی باید چه باشد و پیشنهاد
+
+
+        // صبح ظهر و عصر و مغرب و عشا
+
+
+        // طراحی و اضافه کردن کلید نماز مستخب و واجب و قضا
+
+
+
+
+
+        getTextRokats();
+
+        getTextLast2();
 
         Button b= (Button) findViewById(R.id.btnIncrement);
         b.setOnClickListener(this);
@@ -99,13 +136,29 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 RokatDBHelper.addAdaRokatRow(4);
                 break;
         }
+        setTextBigNumber();
+
+        //int totalRokat=getSharedPreferences(rokatKey,Context.MODE_PRIVATE);
+        getTextLast2();
+
+        getTextRokats();
+    }
+
+    private void setTextBigNumber() {
         String stRokat= Integer.toString(rokat);
         TextView tv = (TextView)findViewById(R.id.txtBigNumnerTodayRokat);
         tv.setText(stRokat);
-
-        //int totalRokat=getSharedPreferences(rokatKey,Context.MODE_PRIVATE);
-
     }
 
+    private void getTextRokats() {
+        TextView txtRokatAll = (TextView)findViewById(R.id.txtRemainRokatAll);
+        int a = RokatDBHelper.getCountKolGhaza()- RokatDBHelper.getCountKolAda();
+        String s=Integer.toString(a);
+        txtRokatAll.setText(s);
+    }
 
+    private void getTextLast2() {
+        TextView last2rowGhaza = (TextView) findViewById(R.id.last2);
+        last2rowGhaza.setText(RokatDBHelper.getlast2records());
+    }
 }

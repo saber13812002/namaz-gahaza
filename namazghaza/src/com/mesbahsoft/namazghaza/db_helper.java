@@ -55,6 +55,10 @@ public class db_helper extends SQLiteOpenHelper {
             + KEY_GHAZA_ROKAT
             + ") FROM " + TABLE_GHAZA ;
 
+    private String Select_Sum_Namaz_Rokar_LastDay = "SELECT SUM ("
+            + KEY_ROKAT + ") FROM "+ TABLE_NAMAZ + " WHERE "
+            + KEY_CREATED_AT + " >= DATE('now','-1 days') ";
+
     public db_helper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
 
@@ -93,6 +97,21 @@ public class db_helper extends SQLiteOpenHelper {
 
         Cursor cursor = db.rawQuery(
                 Select_Sum_NAMAZ_Rokat, null);
+        if(cursor.moveToFirst()) {
+            return cursor.getInt(0);
+        }
+
+        return 0;
+    }
+
+    public int getCountKolAdaLastDay(){
+        SQLiteDatabase db = getReadableDatabase();
+
+
+        //SELECT SUM(column_name) FROM table_name;
+
+        Cursor cursor = db.rawQuery(
+                Select_Sum_Namaz_Rokar_LastDay, null);
         if(cursor.moveToFirst()) {
             return cursor.getInt(0);
         }
