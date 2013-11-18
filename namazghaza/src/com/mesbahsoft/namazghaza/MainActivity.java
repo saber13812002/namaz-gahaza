@@ -23,7 +23,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
     private db_helper RokatDBHelper;
 
 
-    int rokat=0;
+    int rokat=0;     //jhkjh
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
