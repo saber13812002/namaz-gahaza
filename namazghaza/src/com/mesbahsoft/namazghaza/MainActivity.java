@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewDebug;
 import android.widget.Button;
 import android.widget.TextView;
+import com.android.volley.toolbox.*;
 
 import java.util.Date;
 
@@ -33,8 +34,8 @@ public class MainActivity extends Activity implements View.OnClickListener{
         RokatDBHelper = new db_helper(this);
 
         // کل رکعات یک روز گذشته  که خوانده شده در بیست و چهار ساعت گذشته
-        //rokat = RokatDBHelper.getCountKolAdaLastDay();
-
+        rokat = RokatDBHelper.getCountKolAdaLastDay();
+        setTextBigNumber();
         // نمایش سرعت نسبی ادا کردن نماز ها به نسبت روز های فعال یا کل روزها
 
 
@@ -74,7 +75,7 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
         getTextRokats();
 
-        getTextLast2();
+        getTextLast3();
 
         Button b= (Button) findViewById(R.id.btnIncrement);
         b.setOnClickListener(this);
@@ -95,6 +96,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
         Button b_add = (Button) findViewById(R.id.btnCalc);
         b_add.setOnClickListener(this);
         b_add.setId(0);
+
+        Button b_refresh = (Button) findViewById(R.id.refresh);
+        b_refresh.setOnClickListener(this);
+        b_refresh.setId(10);
 
 
         // use a default value using new Date()
@@ -135,11 +140,15 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 rokat+=4;
                 RokatDBHelper.addAdaRokatRow(4);
                 break;
+            case 10:
+                Intent intentUPDATE = new Intent(MainActivity.this, JsonRequest2.class);
+                startActivity(intentUPDATE);
+                break;
         }
         setTextBigNumber();
 
         //int totalRokat=getSharedPreferences(rokatKey,Context.MODE_PRIVATE);
-        getTextLast2();
+        getTextLast3();
 
         getTextRokats();
     }
@@ -158,7 +167,12 @@ public class MainActivity extends Activity implements View.OnClickListener{
     }
 
     private void getTextLast2() {
-        TextView last2rowGhaza = (TextView) findViewById(R.id.last2);
+        TextView last2rowGhaza = (TextView) findViewById(R.id.last3);
         last2rowGhaza.setText(RokatDBHelper.getlast2records());
+    }
+
+    private void getTextLast3() {
+        TextView last3rowGhaza = (TextView) findViewById(R.id.last3);
+        last3rowGhaza.setText(RokatDBHelper.getlast3records());
     }
 }

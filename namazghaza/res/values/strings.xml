@@ -8,4 +8,9 @@
     <string name="totalrokat">400</string>
     <string name="me">me</string>
     <string name="all">all</string>
+    <string name="update">update</string>
+    <string name="remainrokat">remainrokat</string>
+    <string name="namaz2rokati">namaz2rokati</string>
+    <string name="namaz3rokati">namaz3rokati</string>
+    <string name="namaz4rokati">namaz4rokati</string><string name="last3namaz">last3namaz</string><string name="year">year</string><string name="month">month</string><string name="day">day</string><string name="rokatnday">Rokat In Day</string><string name="calcandadd">Calc and Add</string>
 </resources>

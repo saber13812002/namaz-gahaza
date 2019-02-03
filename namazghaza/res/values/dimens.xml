@@ -1,7 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="txt20">20dp</dimen>
-    <dimen name="txt25">25dp</dimen>
-    <dimen name="txt35">35dp</dimen>
-    <dimen name="txt40">40dp</dimen>
-</resources>
+<dimen name="txt15">15dp</dimen><dimen name="txt20">20dp</dimen><dimen name="txt25">25dp</dimen><dimen name="txt30">30dp</dimen></resources>

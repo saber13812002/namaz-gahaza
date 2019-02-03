@@ -55,7 +55,7 @@ public class db_helper extends SQLiteOpenHelper {
             + KEY_GHAZA_ROKAT
             + ") FROM " + TABLE_GHAZA ;
 
-    private String Select_Sum_Namaz_Rokar_LastDay = "SELECT SUM ("
+    private String Select_Sum_Namaz_Rokat_LastDay = "SELECT SUM ("
             + KEY_ROKAT + ") FROM "+ TABLE_NAMAZ + " WHERE "
             + KEY_CREATED_AT + " >= DATE('now','-1 days') ";
 
@@ -111,7 +111,7 @@ public class db_helper extends SQLiteOpenHelper {
         //SELECT SUM(column_name) FROM table_name;
 
         Cursor cursor = db.rawQuery(
-                Select_Sum_Namaz_Rokar_LastDay, null);
+                Select_Sum_Namaz_Rokat_LastDay, null);
         if(cursor.moveToFirst()) {
             return cursor.getInt(0);
         }
@@ -152,6 +152,33 @@ public class db_helper extends SQLiteOpenHelper {
                 c.moveToFirst();
             }
             recent = Integer.toString(b)+ " + " +Integer.toString(a);
+            return recent;
+        }
+
+        return "recent";
+    }
+
+
+    public String getlast3records(){
+        SQLiteDatabase db = getReadableDatabase();
+        int aa=0,bb=0,cc=0;
+        String recent="";
+        String sqlquery="SELECT "
+                + KEY_ROKAT
+                + " FROM " + TABLE_NAMAZ + " ORDER BY "+ KEY_ID +" DESC LIMIT 3";
+        Cursor c=db.rawQuery(sqlquery,null);
+        if(c.moveToFirst()) {
+            int curSize=c.getCount();  // return no of rows
+            if(curSize>2) {
+                aa =c.getInt( c.getColumnIndexOrThrow(KEY_ROKAT));
+                c.moveToNext();
+                bb =c.getInt( c.getColumnIndexOrThrow(KEY_ROKAT));
+                c.moveToNext();
+                cc =c.getInt( c.getColumnIndexOrThrow(KEY_ROKAT));
+            } else {
+                c.moveToFirst();
+            }
+            recent = Integer.toString(cc)+ " + " +Integer.toString(bb)+ " + " +Integer.toString(aa);
             return recent;
         }
 

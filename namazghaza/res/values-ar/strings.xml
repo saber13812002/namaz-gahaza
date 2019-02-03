@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">نماز قضا و مستحب</string>
+    <string name="setting">تنظیمات</string>
+    <string name="undo">undo</string>
+    <string name="redo">redo</string>
+    <string name="userid">صابر</string>
+    <string name="totalrokat">400</string>
+    <string name="me">بنده خدا</string>
+    <string name="all">خلائق دیگر</string>
+    <string name="update">بروزرسانی</string>
+    <string name="remainrokat">رکعات باقیمانده</string>
+    <string name="namaz2rokati">نماز دو رکعتی</string>
+    <string name="namaz3rokati">نماز سه رکعتی</string>
+    <string name="namaz4rokati">نماز چهار رکعتی</string>
+    <string name="last3namaz">نماز های اخیر</string>
+    <string name="year">چند سال نماز قضا یا مستحبی؟</string>
+    <string name="month">چند ماه</string>
+    <string name="day">چند روز</string>
+    <string name="rokatnday">روزی چند رکعت</string>
+    <string name="calcandadd">محاسبه و اضافه کردن به سیستم</string>
+</resources>

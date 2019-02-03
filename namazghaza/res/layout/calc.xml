@@ -3,28 +3,28 @@
               android:orientation="vertical"
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
-              style="@style/app_theme">
+              style="@style/app_theme" android:background="@drawable/bg">
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="0dp" android:layout_weight="0.6" android:background="@drawable/toplinkbar">
+            android:layout_height="0dp" android:layout_weight="0.8" android:background="@drawable/toplinkbar_full">
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/me"
                 android:id="@+id/txtToplinkbarme" android:layout_weight="1" android:layout_gravity="center_vertical"
-                android:layout_marginLeft="50dp" android:textColor="@color/black"/>
+                android:layout_marginLeft="0dp" android:textColor="@color/black" android:gravity="center"/>
         <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="@string/all"
                 android:id="@+id/txtTopLinkBarAll" android:layout_weight="1" android:layout_gravity="center_vertical"
-                android:layout_marginLeft="50dp" android:textColor="@color/black"/>
+                android:layout_marginLeft="0dp" android:textColor="@color/black" android:gravity="center"/>
     </LinearLayout>
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="0dp" android:layout_weight="3">
+            android:layout_height="0dp" android:layout_weight="5.5">
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="0dp"
@@ -32,7 +32,7 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Year"
+                    android:text="@string/year"
                     android:id="@+id/textView" android:layout_gravity="center"/>
             <EditText
                     android:inputType="number"
@@ -43,7 +43,7 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Month"
+                    android:text="@string/month"
                     android:id="@+id/textView1" android:layout_gravity="center"/>
             <EditText
                     android:inputType="number"
@@ -54,7 +54,7 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Days"
+                    android:text="@string/day"
                     android:id="@+id/textView2" android:layout_gravity="center"/>
             <EditText
                     android:inputType="number"
@@ -65,7 +65,7 @@
             <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rokat In Day"
+                    android:text="@string/rokatnday"
                     android:id="@+id/textView3" android:layout_gravity="center"/>
             <EditText
                     android:inputType="number"
@@ -76,7 +76,7 @@
             <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calc and Add"
+                    android:text="@string/calcandadd"
                     android:id="@+id/btnOK" android:layout_gravity="center" android:layout_weight="1"/>
         </LinearLayout>
     </LinearLayout>
